@@ -13,3 +13,14 @@ let precoBolo = 19.99
 console.log(precoBolo)
 
 let cidade = 'São Paulo'
+
+//OPERAÇÕES EM VARIÁVEIS
+let x = 1
+x = x + 5
+let name = 'João'
+let sobrenome = 'Gonçalves'
+let nomeCompleto = name + ' ' + sobrenome
+console.log(x)
+console.log(nomeCompleto)
+
+
