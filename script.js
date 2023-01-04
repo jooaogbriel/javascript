@@ -55,6 +55,25 @@
 // }
 
 //TERNÁRIO
-let result = conditional ? true : false
+//let result = conditional ? true : false
 
 //SWITCH
+// let profession = 'policial';
+
+// switch (profession) {
+//     case 'fiscal':
+//         console.log('verde')
+//         break;
+
+//     case 'policial':
+//         console.log('azul')
+//         break;
+
+//     case 'bombeiro':
+//         console.log('vermelho')
+//         break;
+
+//     default:
+//         console.log('preta');
+//         break;
+// }
