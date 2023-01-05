@@ -77,3 +77,16 @@
 //         console.log('preta');
 //         break;
 // }
+
+//FUNCTION
+function validar(){
+    if(usuario === 'joao' && senha === '1234'){
+        console.log('usuario concedido')
+    } else {
+        console.log('usuario negado')
+    }
+}
+
+let usuario = 'joao';
+let senha = '1234';
+let validacao = validar(usuario, senha)
