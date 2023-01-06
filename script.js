@@ -79,14 +79,38 @@
 // }
 
 //FUNCTION
-function validar(){
-    if(usuario === 'joao' && senha === '1234'){
-        console.log('usuario concedido')
-    } else {
-        console.log('usuario negado')
-    }
-}
+// function validar(){
+//     if(usuario === 'joao' && senha === '1234'){
+//         console.log('usuario concedido')
+//     } else {
+//         console.log('usuario negado')
+//     }
+// }
 
-let usuario = 'joao';
-let senha = '1234';
-let validacao = validar(usuario, senha)
+// let usuario = 'joao';
+// let senha = '1234';
+// let validacao = validar(usuario, senha)
+
+// function one(){
+//     function two(){
+
+//     }
+// }
+//ARRAYS
+// let ingredientes = ['farinha', 'leite']
+// //adicionar
+// ingredientes.push('ovo')
+// //tamanho
+// console.log(ingredientes.length)
+// //remover o ultimo item
+// ingredientes.pop()
+// //remover o primeiro item
+// ingredientes.shift()
+
+// let carros = ['BMW', 'Ferrari', 'Mercedes']
+// let x = carros[1]
+// carros[1] = 'Audi'
+// carros.push('volvo')
+// console.log(carros.length)
+// console.log(carros)
+
