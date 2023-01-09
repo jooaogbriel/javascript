@@ -114,3 +114,18 @@
 // console.log(carros.length)
 // console.log(carros)
 
+
+//LOOPING
+// let cores = ['preto', 'azul', 'branco', 'vermelho']
+// for(let i = 0; i < cores.length; i++){
+//     console.log(cores[i])
+// }
+
+
+//DOM
+
+document.getElementById('') 
+document.getElementsByClassName('')
+document.querySelector('#exemplo1')
+document.querySelector('h1')
+
