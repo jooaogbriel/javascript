@@ -5,6 +5,8 @@
 // let obj = {nome: 'joão', idade: 19 };
 // console.log(typeof nome); // TIPO
 
+
+
 // //EXERCICIO 1
 // let carro = 'Ferrari';
 // console.log(carro);
@@ -124,8 +126,34 @@
 
 //DOM
 
-document.getElementById('') 
-document.getElementsByClassName('')
-document.querySelector('#exemplo1')
-document.querySelector('h1')
+// document.getElementById('') 
+// document.getElementsByClassName('')
+// document.querySelector('#exemplo1')
+// document.querySelector('h1')
 
+
+
+
+
+
+// const input = document.querySelector('input')
+// const ul = document.querySelector('ul')
+
+// input.addEventListener('keyup', handleKeyUp)
+
+// function handleKeyUp (e) {
+//     if(e.key === 'Enter'){
+//         const newLi = document.createElement('li')
+//         newLi.innerHTML = input.value
+//         ul.appendChild(newLi)
+//     }
+// }
+
+// input.addEventListener('keyup', handleKeyUp)
+
+class Person {
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+}
