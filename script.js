@@ -151,9 +151,97 @@
 
 // input.addEventListener('keyup', handleKeyUp)
 
-class Person {
-    constructor(name, age){
-        this.name = name
-        this.age = age
+// class Person {
+//     steps = 0
+
+//     constructor(name, age){
+//         this.name = name
+//         this.age = age
+//     }
+//     countSteps (){
+//         this.steps++
+//     }
+// }
+
+// class Student extends Person {
+    
+//     constructor(modulo, notas,age, name){
+//         super(name,age)
+//         this.modulo = modulo
+//         this.notas = notas
+//     }
+// }
+
+
+// let p1 = new Person('Joao', 19)
+// let p2 = new Person('Isis', 21)
+
+// p1.countSteps()
+// console.log(`Passos de ${p1.name}: ${p1.steps}`)
+
+//console.log(p1.name, p2.age)
+
+// class Form{
+    
+// }
+
+// class Input {
+
+//     _type = 'text'
+//     required = false;
+
+//     constructor(name, label){
+//         this.name = name;
+//         this.label = label;
+//     }
+
+//     get type() {
+//         return this._type
+//     }
+//     set type(t) {
+//         if(['text', 'password', 'email', 'submit'].includes(t)){
+//             this._type = t
+//         } else {
+//             throw new Error(`Input ${t} não existe`)
+//         }
+//     }
+// }
+// let email = new Input('email', 'Digite seu email')
+// email.type = 'email'
+// email.required = true
+
+// let password = new Input('password', 'Digite sua senha')
+// email.type = 'password';
+
+// class Button extends Input {
+//     constructor(label){
+//         super('', label);
+//         this.type = 'submit';
+//     }
+// }
+
+// let button = new Button('Enviar')
+
+// const frase = "Meu cachorro se chama Doug. É um cachorro lindo."
+// const fraseModificada = frase.replace("cachorro", "gato")
+
+// console.log(fraseModificada)
+// // Saída: "Meu gato se chama Doug. É um cachorro lindo."
+
+// const frase2 = "Meu cachorro se chama Doug. É um cachorro lindo."
+// const fraseModificada2 = frase.replaceAll("cachorro", "gato")
+
+// console.log(fraseModificada2)
+// Saída: "Meu gato se chama Doug. É um gato lindo."
+
+function GenerateFibonacci(number){
+    var fibonacci = [];
+    fibonacci[0] = 0;
+    fibonacci[1] = 1;
+    for (var i = 2; i < number; i++) {
+      fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
     }
-}
+    return fibonacci;
+    }
+    var f = GenerateFibonacci(15);
+    console.log(f);
