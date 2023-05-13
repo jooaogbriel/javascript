@@ -234,14 +234,26 @@
 // console.log(fraseModificada2)
 // Saída: "Meu gato se chama Doug. É um gato lindo."
 
-function GenerateFibonacci(number){
-    var fibonacci = [];
-    fibonacci[0] = 0;
-    fibonacci[1] = 1;
-    for (var i = 2; i < number; i++) {
-      fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
-    }
-    return fibonacci;
-    }
-    var f = GenerateFibonacci(15);
-    console.log(f);
+let votosA = 0;
+let votosB = 0;
+let votosC = 0;
+
+while (true) {
+  const voto = prompt("Digite a letra correspondente ao candidato (A, B ou C) ou X para encerrar a votação:");
+  
+  if (voto === "A") {
+    votosA++;
+    console.log("Voto registrado com sucesso!");
+  } else if (voto === "B") {
+    votosB++;
+    console.log("Voto registrado com sucesso!");
+  } else if (voto === "C") {
+    votosC++;
+    console.log("Voto registrado com sucesso!");
+  } else if (voto === "X") {
+    console.log(`Votação encerrada.\nTotal de votos:\nCandidato A: ${votosA}\nCandidato B: ${votosB}\nCandidato C: ${votosC}`);
+    break;
+  } else {
+    console.log("Candidato não encontrado. Por favor, digite A, B ou C para votar ou X para encerrar a votação.");
+  }
+}
