@@ -233,27 +233,45 @@
 
 // console.log(fraseModificada2)
 // Saída: "Meu gato se chama Doug. É um gato lindo."
+// function nomeComMaisCaracteres(nomes,nome,num) {
+//   let index = nomes[num];
+//   if (nome == index) {
+//     return 'acertei'
+//   } else {
+//     return 'nao era quem eu pensava'
+//   }
+// }
+// let nomes = ["Pedro", "Rafael", "José", "Carla", "Maria", "Josef", "Raquel"]
+// console.log(nomeComMaisCaracteres(nomes,'Rafael',1));
 
-let votosA = 0;
-let votosB = 0;
-let votosC = 0;
+// function nomeComMaisCaracteres(numeros, outrosNumeros){
+//   if (numeros.length > outrosNumeros.length) {
+//     return ` A maior lista é a lista cujo último número é: ${numeros[numeros.length - 1]}`
+//   }  else {
+//     return ` A maior lista é a lista cujo último número é: ${outrosNumeros[outrosNumeros.length -1]}`
+//   }
+ 
+// }
 
-while (true) {
-  const voto = prompt("Digite a letra correspondente ao candidato (A, B ou C) ou X para encerrar a votação:");
-  
-  if (voto === "A") {
-    votosA++;
-    console.log("Voto registrado com sucesso!");
-  } else if (voto === "B") {
-    votosB++;
-    console.log("Voto registrado com sucesso!");
-  } else if (voto === "C") {
-    votosC++;
-    console.log("Voto registrado com sucesso!");
-  } else if (voto === "X") {
-    console.log(`Votação encerrada.\nTotal de votos:\nCandidato A: ${votosA}\nCandidato B: ${votosB}\nCandidato C: ${votosC}`);
-    break;
+// let numeros = [1,2,3,4,5,6,10,7]
+// let outrosNumeros = [5,7,9,4,2,2,3,3,3,3,]
+// console.log(nomeComMaisCaracteres(numeros, outrosNumeros));
+
+const listaDeElementos = [1,5,7,9,3, "10", "11", "15"]
+console.log(listaDeElementos)
+function arr (num){
+  let index = listaDeElementos.indexOf(num)
+  if (index !== -1) {
+    listaDeElementos.splice(index, 1);
+    return `Elemento ${index} deletado com sucesso`;
   } else {
-    console.log("Candidato não encontrado. Por favor, digite A, B ou C para votar ou X para encerrar a votação.");
+    return "Elemento não encontrado";
   }
+  
 }
+r = arr('11')
+console.log(r)
+console.log(listaDeElementos)
+
+
+
