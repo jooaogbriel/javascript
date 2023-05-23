@@ -257,21 +257,23 @@
 // let outrosNumeros = [5,7,9,4,2,2,3,3,3,3,]
 // console.log(nomeComMaisCaracteres(numeros, outrosNumeros));
 
-const listaDeElementos = [1,5,7,9,3, "10", "11", "15"]
-console.log(listaDeElementos)
-function arr (num){
-  let index = listaDeElementos.indexOf(num)
-  if (index !== -1) {
-    listaDeElementos.splice(index, 1);
-    return `Elemento ${index} deletado com sucesso`;
-  } else {
-    return "Elemento não encontrado";
-  }
+// const listaDeElementos = [1,5,7,9,3, "10", "11", "15"]
+// console.log(listaDeElementos)
+// function arr (num){
+//   let index = listaDeElementos.indexOf(num)
+//   if (index !== -1) {
+//     listaDeElementos.splice(index, 1);
+//     return `Elemento ${index} deletado com sucesso`;
+//   } else {
+//     return "Elemento não encontrado";
+//   }
   
-}
-r = arr('11')
-console.log(r)
-console.log(listaDeElementos)
+// }
+// r = arr('11')
+// console.log(r)
+// console.log(listaDeElementos)
+
+
 
 
 
