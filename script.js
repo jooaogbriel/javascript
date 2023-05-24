@@ -273,7 +273,25 @@
 // console.log(r)
 // console.log(listaDeElementos)
 
-
-
-
-
+const carro = {  
+  placa: "ABC123",   
+  classes: ["sedan"],  
+  luxo: true,
+  potencia: 200, 
+  estacionado: true  
+}
+function obterPlaca(){
+  return carro.placa
+}
+function verificarClasses(){
+  return carro.classes[0]
+}
+function potenciaReal (){
+  if (carro.luxo === true){
+    return carro.potencia * carro.potencia
+  } else {
+    return carro.potencia
+  }
+}
+r = potenciaReal()
+console.log(r)
