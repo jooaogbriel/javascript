@@ -273,25 +273,203 @@
 // console.log(r)
 // console.log(listaDeElementos)
 
-const carro = {  
-  placa: "ABC123",   
-  classes: ["sedan"],  
-  luxo: true,
-  potencia: 200, 
-  estacionado: true  
+// const carro = {  
+//   placa: "ABC123",   
+//   classes: ["sedan"],  
+//   luxo: true,
+//   potencia: 200, 
+//   estacionado: true  
+// }
+// function obterPlaca(){
+//   return carro.placa
+// }
+// function verificarClasses(){
+//   return carro.classes[0]
+// }
+// function potenciaReal (){
+//   if (carro.luxo === true){
+//     return carro.potencia * carro.potencia
+//   } else {
+//     return carro.potencia
+//   }
+// }
+// function adicionarNovaClasse(classe) {
+//   const classesPermitidas = ['sedan', 'hatchback', 'suv', 'crossover', 'cupê'];
+
+//   if (carro.classes.length >= 3) {
+//     return "Este carro não pode ter mais classes";
+//   }
+
+//   if (!classesPermitidas.includes(classe)) {
+//     return "Classe não permitida";
+//   }
+
+//   if (carro.classes.includes(classe)) {
+//     return `O carro já possui a classe ${classe}`;
+//   }
+
+//   carro.classes.push(classe);
+//   return `Classe ${classe} adicionada com sucesso`;
+// }
+
+// function naoMaisLuxo () {
+//   if (carro.estacionado === false) {
+//     return `O carro ${carro.placa} não está estacionado`
+//   }
+//   else if (carro.luxo === false){
+//     return `O carro ${carro.placa} não possui a classe 'Luxo' `
+//   } else {
+//     return `O carro ${carro.placa} não é mais considerado um carro de luxo`
+//   }
+// }
+
+// r = naoMaisLuxo()
+
+
+// console.log(r)
+
+const carros = [
+  {
+      modelo: "Ka",
+      marca: "Ford",
+      ano: "2000",
+      cor: "Branco",
+      completo: false,
+      acessorios: ['Vidro Elétrico'],
+      preco: 6799.33
+  },
+  {
+      modelo: "Gol",
+      marca: "VW",
+      ano: "1996",
+      cor: "Preto",
+      completo: false,
+      acessorios: ['Trava'],
+      preco: 12199.13
+  },
+  {
+      modelo: "Palio",
+      marca: "Fiat",
+      ano: "1995",
+      cor: "Verde",
+      completo: false,
+      acessorios: [],
+      preco: 11099.1
+  },
+  {
+      modelo: "Monza",
+      marca: "Chevrolet",
+      ano: "1993",
+      cor: "Vinho",
+      completo: false,
+      acessorios: [],
+      preco: 14578.25
+  },
+  {
+      modelo: "Saveiro",
+      marca: "VW",
+      ano: "2013",
+      cor: "Prata",
+      completo: false,
+      acessorios: [],
+      preco: 28399.13
+  },
+  {
+      modelo: "Gol",
+      marca: "VW",
+      ano: "1996",
+      cor: "Preto",
+      completo: true,
+      acessorios: ['Alarme', 'Trava', 'Ar', 'Vidro Elétrico'],
+      preco: 14350.45
+  },
+  {
+      modelo: "Gol",
+      marca: "VW",
+      ano: "2013",
+      cor: "Preto",
+      completo: true,
+      acessorios: ['Alarme', 'Trava', 'Ar', 'Vidro Elétrico'],
+      preco: 22109.21
+  },
+  {
+      modelo: "Montana",
+      marca: "Chevrolet",
+      ano: "2011",
+      cor: "Azul",
+      completo: false,
+      acessorios: [],
+      preco: 15999.13
+  },
+  {
+      modelo: "Stilo",
+      marca: "Fiat",
+      ano: "2000",
+      cor: "Preto",
+      completo: false,
+      acessorios: [],
+      preco: 17251.36
+  },
+  {
+    modelo: "F8 Spider",
+    marca: "Ferrari",
+    ano: "2024",
+    cor: "Vermelha",
+    completo: true,
+    acessorios: [],
+    preco: 4000000
 }
-function obterPlaca(){
-  return carro.placa
+]
+
+function contaTotal() {
+  return carros.length
 }
-function verificarClasses(){
-  return carro.classes[0]
-}
-function potenciaReal (){
-  if (carro.luxo === true){
-    return carro.potencia * carro.potencia
-  } else {
-    return carro.potencia
+
+function precoTotal(carros) {
+  let soma = 0
+  for (let i = 0; i < carros.length; i++){
+      soma += carros[i].preco
+
   }
+  return `A soma do preço de todos veículos é R${soma}`
 }
-r = potenciaReal()
+
+function filtraPorMarca(carros) {
+  var filtrado = carros.filter( carros => carros.completo === true);
+  return filtrado
+ 
+}
+
+function adicionaCarro() {
+  return carros.push({
+    modelo: "F8 Spider",
+    marca: "Ferrari",
+    ano: "2024",
+    cor: "Vermelha",
+    completo: true,
+    acessorios: [],
+    preco: 4000000
+})
+}
+
+function removeCarro(carros, index) {
+  carros.splice(index, 1)
+}
+
+function contaCarrosNovos(carros) {
+  var filtrado = carros.filter( carros => carros.ano > 2013);
+  return filtrado
+}
+
+function adicionarDono(carros, indice, pessoa) {
+  carros[indice].donos = {
+    nome: pessoa.nome,
+    telefone: pessoa.telefone
+  };
+  
+  return carros;
+}
+
+r = adicionarDono(carros,1,{nome:'joao', telefone: 123})
 console.log(r)
+console.log(carros)
