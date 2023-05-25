@@ -544,3 +544,31 @@
 // console.log(s)
 // console.log(p)
 
+const tv = {
+  canalAtual: 0,
+  volume: 0
+}
+
+function aumentarVolume (tv) {
+  tv.volume++
+  if (tv.volume === 10) {
+    return 'Volume no máximo'
+  } else {
+    return `Volume está em: ${tv.volume}`
+  }
+}
+
+function diminuirVolume (tv) {
+  tv.volume--
+  if (tv.volume === 0) {
+    return 'Volume no mínimo'
+  } else {
+    return `Volume está em: ${tv.volume}`
+  }
+}
+
+r = aumentarVolume(tv)
+r = aumentarVolume(tv)
+q = diminuirVolume(tv)
+console.log(r)
+console.log(q)
