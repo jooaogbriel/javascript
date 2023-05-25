@@ -732,3 +732,27 @@
 // s = insertNewEmployeeInDepartment('Capitation', {name: 'joao', age:19, responsibility: 'tech leader', salary: 9000})
 // console.log(s)
 // console.log(departmentList)
+
+let ganhador = {
+  nome: 'Adamastor',
+  nascimento: '16/09/1986',
+  cpf: '123.321.789-98',
+  estadoCivil: 'Casado'
+}
+
+function isTheWinner (nome, cpf){
+  const notPeaple = []
+  if (nome === ganhador.nome && cpf === ganhador.cpf) {
+    return 'É o ganhador!'
+  } else {
+    notPeaple.push(nome)
+    notPeaple.push(cpf)
+    console.log(notPeaple)
+    console.log(notPeaple.length)
+    return `Não é o ganhador: ${notPeaple}`
+  }
+}
+
+r = isTheWinner('Adamastor', '123.321.789-98')
+r = isTheWinner('Adamastorii', '123.321.789-98')
+console.log(r)
