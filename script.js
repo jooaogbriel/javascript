@@ -544,31 +544,191 @@
 // console.log(s)
 // console.log(p)
 
-const tv = {
-  canalAtual: 0,
-  volume: 0
-}
+// const tv = {
+//   canalAtual: 0,
+//   volume: 0
+// }
 
-function aumentarVolume (tv) {
-  tv.volume++
-  if (tv.volume === 10) {
-    return 'Volume no máximo'
-  } else {
-    return `Volume está em: ${tv.volume}`
-  }
-}
+// function aumentarVolume (tv) {
+//   tv.volume++
+//   if (tv.volume === 10) {
+//     return 'Volume no máximo'
+//   } else {
+//     return `Volume está em: ${tv.volume}`
+//   }
+// }
 
-function diminuirVolume (tv) {
-  tv.volume--
-  if (tv.volume === 0) {
-    return 'Volume no mínimo'
-  } else {
-    return `Volume está em: ${tv.volume}`
-  }
-}
+// function diminuirVolume (tv) {
+//   tv.volume--
+//   if (tv.volume === 0) {
+//     return 'Volume no mínimo'
+//   } else {
+//     return `Volume está em: ${tv.volume}`
+//   }
+// }
 
-r = aumentarVolume(tv)
-r = aumentarVolume(tv)
-q = diminuirVolume(tv)
-console.log(r)
-console.log(q)
+// r = aumentarVolume(tv)
+// r = aumentarVolume(tv)
+// q = diminuirVolume(tv)
+// console.log(r)
+// console.log(q)
+
+// const departmentList = [
+//   {
+//     departmentName: 'Financial',
+//     employees:
+//     [
+//       {
+//         name: 'Rose',
+//         age: 26,
+//         responsibility: 'Financial director',
+//         salary: 5600
+//       },
+//       {
+//         name: 'Stevem',
+//         age: 32,
+//         responsibility: 'Financial manager',
+//         salary: 4200
+//       },
+//       {
+//         name: 'Beca',
+//         age: 26,
+//         responsibility: 'Financial analyst',
+//         salary: 2800
+//       }
+//     ],
+//     working: true
+//   },
+//   {
+//     departmentName: 'Expedition',
+//     employees:
+//     [
+//       {
+//         name: 'Rooper',
+//         age: 35,
+//         responsibility: 'Expedition director',
+//         salary: 5600
+//       },
+//       {
+//         name: 'Maggie',
+//         age: 22,
+//         responsibility: 'Expedition manager',
+//         salary: 4200
+//       },
+//       {
+//         name: 'Thompson',
+//         age: 41,
+//         responsibility: 'Expedition analyst',
+//         salary: 2800
+//       }
+//     ],
+//     working: true
+//   },
+//   {
+//     departmentName: 'Capitation',
+//     employees:
+//     [
+//       {
+//         name: 'Saory',
+//         age: 35,
+//         responsibility: 'Capitation director',
+//         salary: 5600
+//       },
+//       {
+//         name: 'Silvia',
+//         age: 22,
+//         responsibility: 'Capitation manager',
+//         salary: 4200
+//       },
+//       {
+//         name: 'Sonem',
+//         age: 41,
+//         responsibility: 'Capitation analyst',
+//         salary: 2800
+//       },
+//       {
+//         name: 'Havi',
+//         age: 41,
+//         responsibility: 'Trainee Capitation manager',
+//         salary: 1500
+//       },
+//       {
+//         name: 'Margie',
+//         age: 25,
+//         responsibility: 'Capitation analyst',
+//         salary: 2800
+//       },
+//       {
+//         name: 'Victoria',
+//         age: 18,
+//         responsibility: 'Trainee Capitation analyst',
+//         salary: 1500
+//       }
+//     ],
+//     working: true
+//   },
+// ]
+
+
+
+// function howManyDepartments (departmentList) {
+//   for(let i = 0; i < departmentList.length; i++){
+//     return departmentList.length
+//   }
+// }
+
+// function changeDepartmentName(currentName, newName) {
+//   for (let i = 0; i < departmentList.length; i++) {
+//     if (departmentList[i].departmentName === currentName) {
+//       departmentList[i].departmentName = newName;
+//       return departmentList[i];
+//     }
+//   }
+
+//   return "Department not found.";
+// }
+
+// function giveTheDepartmentABreak (departmentList) {
+//   for (let i = 0; i < departmentList.length; i++) {
+//     let r = departmentList[i].working === true ? departmentList[i].working = false : departmentList[i].working = true
+//   }
+// }
+
+// function howManyEmployeesInDepartment(departmentName) {
+//   for (let i = 0; i < departmentList.length; i++) {
+//     const department = departmentList[i];
+
+//     if (department.departmentName === departmentName) {
+//       return department.employees.length;
+//     }
+//   }
+
+//   return "Department not found.";
+// }
+
+// function insertNewEmployeeInDepartment (departmentName, person) {
+//   for (let i = 0; i < departmentList.length; i++) {
+//     const department = departmentList[i];
+//     if (department.departmentName === departmentName) {
+//       return department.employees.push(person)
+//     }
+//   }
+// }
+
+// // r = howManyDepartments(departmentList)
+// // console.log(r)
+
+// // q = changeDepartmentName('Financial', 'Finance')
+// // console.log(q)
+// // console.log()
+
+// // s = giveTheDepartmentABreak(departmentList)
+// // console.log(s)
+// // console.log(departmentList)
+
+// p = howManyEmployeesInDepartment('Capitation')
+// console.log(p)
+
+// s = insertNewEmployeeInDepartment('Capitation', {name: 'joao', age:19, responsibility: 'tech leader', salary: 9000})
+// console.log(s)
+// console.log(departmentList)
