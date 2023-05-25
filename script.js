@@ -494,3 +494,53 @@
 // }
 // res = fraseInitial('joao',  2003, 'srpq') 
 // console.log(res)
+
+// const elevador = {
+//     andarAtual: 0,
+//     totalDeAndares: 10,
+//     capacidadeDoElevador: 5,
+//     ocupacaoAtual: 1
+// };
+// function entrar (elevador) {
+//   if (elevador.ocupacaoAtual > 5) {
+//     return 'Elevador Lotado'
+//   } else {
+//     return elevador.ocupacaoAtual++
+//   }
+// }
+
+// function sair (elevador) {
+//   elevador.ocupacaoAtual--
+//   return `Ocupação atual em : ${elevador.ocupacaoAtual}`
+// }
+
+// function subir (elevador) {
+//   elevador.andarAtual++
+//   if (elevador.andarAtual === elevador.totalDeAndares) {
+//     return `O elevador já se encontra no último andar`
+//   } else {
+//     return `Estamos no andar: ${elevador.andarAtual}`
+//   }
+// }
+
+// function descer (elevador) {
+//   elevador.andarAtual--
+//   if (elevador.andarAtual === 0) {
+//     return `O elevador já se encontra no térrio`
+//   } else {
+//     return `Estamos no andar: ${elevador.andarAtual}`
+//   }
+// }
+
+// r = entrar(elevador)
+// s = sair(elevador)
+// q = subir(elevador)
+// p = descer(elevador)
+
+
+// console.log(r)
+// console.log(q)
+
+// console.log(s)
+// console.log(p)
+
