@@ -733,26 +733,101 @@
 // console.log(s)
 // console.log(departmentList)
 
-let ganhador = {
-  nome: 'Adamastor',
-  nascimento: '16/09/1986',
-  cpf: '123.321.789-98',
-  estadoCivil: 'Casado'
-}
+// let ganhador = {
+//   nome: 'Adamastor',
+//   nascimento: '16/09/1986',
+//   cpf: '123.321.789-98',
+//   estadoCivil: 'Casado'
+// }
 
-function isTheWinner (nome, cpf){
-  const notPeaple = []
-  if (nome === ganhador.nome && cpf === ganhador.cpf) {
-    return 'É o ganhador!'
-  } else {
-    notPeaple.push(nome)
-    notPeaple.push(cpf)
-    console.log(notPeaple)
-    console.log(notPeaple.length)
-    return `Não é o ganhador: ${notPeaple}`
+// function isTheWinner (nome, cpf){
+//   const notPeaple = []
+//   if (nome === ganhador.nome && cpf === ganhador.cpf) {
+//     return 'É o ganhador!'
+//   } else {
+//     notPeaple.push(nome)
+//     notPeaple.push(cpf)
+//     console.log(notPeaple)
+//     console.log(notPeaple.length)
+//     return `Não é o ganhador: ${notPeaple}`
+//   }
+// }
+
+// r = isTheWinner('Adamastor', '123.321.789-98')
+// r = isTheWinner('Adamastorii', '123.321.789-98')
+// console.log(r)
+
+let listaAlunos = [
+  {
+    nome: 'João',
+    curso: 'Ciencia da Computação',
+    turno: 'Noturno',
+    mediaCorte: 7,
+    materias: [
+      {
+        nome: 'Calculo I',
+        avaliacoes: [6, 8, 10, 8]
+      },
+      {
+        nome: 'Pensamento Computacional',
+        avaliacoes: [6, 8, 6, 8]
+      },
+      {
+        nome: 'Linguagem Orientada a Objetos',
+        avaliacoes: [7, 8, 9, 10]
+      },
+      {
+        nome: 'Arquitetura de Organização de Computadores',
+        avaliacoes: [6, 8, 7, 8]
+      }
+    ]
   }
+]
+
+function mediaTotal(listaAlunos) {
+  let total = 0;
+  let count = 0;
+  for (let i = 0; i < listaAlunos.length; i++) {
+    const mat = listaAlunos[i].materias;
+
+    for (let j = 0; j < mat.length; j++) {
+      const r = mat[j].avaliacoes;
+      for (let x = 0; x < r.length; x++) {
+        total += r[x];
+        count++;
+      }
+      
+    }
+  }
+
+  return `Média total: ${total / count}`;
 }
 
-r = isTheWinner('Adamastor', '123.321.789-98')
-r = isTheWinner('Adamastorii', '123.321.789-98')
-console.log(r)
+const r = mediaTotal(listaAlunos);
+console.log(r);
+
+function mediaMaterias(listaAlunos) {
+  let medias = {};
+
+  for (let i = 0; i < listaAlunos.length; i++) {
+    const mat = listaAlunos[i].materias;
+
+    for (let j = 0; j < mat.length; j++) {
+      const r = mat[j].avaliacoes;
+      const nomeMateria = mat[j].nome;
+      let soma = 0;
+
+      for (let x = 0; x < r.length; x++) {
+        soma += r[x];
+      }
+
+      const media = soma / r.length;
+      medias[nomeMateria] = media;
+    }
+  }
+
+  return medias;
+}
+
+const medias = mediaMaterias(listaAlunos);
+console.log(medias);
