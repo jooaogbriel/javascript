@@ -757,77 +757,176 @@
 // r = isTheWinner('Adamastorii', '123.321.789-98')
 // console.log(r)
 
-let listaAlunos = [
-  {
-    nome: 'João',
-    curso: 'Ciencia da Computação',
-    turno: 'Noturno',
-    mediaCorte: 7,
-    materias: [
-      {
-        nome: 'Calculo I',
-        avaliacoes: [6, 8, 10, 8]
-      },
-      {
-        nome: 'Pensamento Computacional',
-        avaliacoes: [6, 8, 6, 8]
-      },
-      {
-        nome: 'Linguagem Orientada a Objetos',
-        avaliacoes: [7, 8, 9, 10]
-      },
-      {
-        nome: 'Arquitetura de Organização de Computadores',
-        avaliacoes: [6, 8, 7, 8]
-      }
-    ]
-  }
-]
+// let listaAlunos = [
+//   {
+//     nome: 'João',
+//     curso: 'Ciencia da Computação',
+//     turno: 'Noturno',
+//     mediaCorte: 7,
+//     materias: [
+//       {
+//         nome: 'Calculo I',
+//         avaliacoes: [6, 8, 10, 8]
+//       },
+//       {
+//         nome: 'Pensamento Computacional',
+//         avaliacoes: [6, 8, 6, 8]
+//       },
+//       {
+//         nome: 'Linguagem Orientada a Objetos',
+//         avaliacoes: [7, 8, 9, 10]
+//       },
+//       {
+//         nome: 'Arquitetura de Organização de Computadores',
+//         avaliacoes: [6, 8, 7, 8]
+//       }
+//     ]
+//   }
+// ]
 
-function mediaTotal(listaAlunos) {
-  let total = 0;
-  let count = 0;
-  for (let i = 0; i < listaAlunos.length; i++) {
-    const mat = listaAlunos[i].materias;
+// function mediaTotal(listaAlunos) {
+//   let total = 0;
+//   let count = 0;
+//   for (let i = 0; i < listaAlunos.length; i++) {
+//     const mat = listaAlunos[i].materias;
 
-    for (let j = 0; j < mat.length; j++) {
-      const r = mat[j].avaliacoes;
-      for (let x = 0; x < r.length; x++) {
-        total += r[x];
-        count++;
-      }
+//     for (let j = 0; j < mat.length; j++) {
+//       const r = mat[j].avaliacoes;
+//       for (let x = 0; x < r.length; x++) {
+//         total += r[x];
+//         count++;
+//       }
       
+//     }
+//   }
+
+//   return `Média total: ${total / count}`;
+// }
+
+// const r = mediaTotal(listaAlunos);
+// console.log(r);
+
+// function mediaMaterias(listaAlunos) {
+//   let medias = {};
+
+//   for (let i = 0; i < listaAlunos.length; i++) {
+//     const mat = listaAlunos[i].materias;
+
+//     for (let j = 0; j < mat.length; j++) {
+//       const r = mat[j].avaliacoes;
+//       const nomeMateria = mat[j].nome;
+//       let soma = 0;
+
+//       for (let x = 0; x < r.length; x++) {
+//         soma += r[x];
+//       }
+
+//       const media = soma / r.length;
+//       medias[nomeMateria] = media;
+//     }
+//   }
+
+//   return medias;
+// }
+
+// const medias = mediaMaterias(listaAlunos);
+// console.log(medias);
+
+const barbearia = {
+  cortes: [
+    { id: 1, tipo: "Militar", valor: 20.0 },
+    { id: 2, tipo: "Samurai", valor: 35.0 },
+    { id: 3, tipo: "Pompadour", valor: 20 },
+    { id: 4, tipo: "Moicano", valor: 0 },
+    { id: 5, tipo: "Razor part", valor: 0 },
+  ],
+
+  barbas: [
+    { id: 1, tipo: "Capitão Jack", valor: 20.0 },
+    { id: 2, tipo: "Van Dyke", valor: 20.0 },
+    { id: 3, tipo: "Barba Média", valor: 20.0 },
+    { id: 4, tipo: "Barba Baixa", valor: 20.0 },
+    { id: 5, tipo: "Barba Zero", valor: 15.0 },
+  ],
+  estaAberto: true,
+};
+
+function buscaCortePorId(id) {
+
+  for (let i = 0; i < barbearia.cortes.length; i++) {
+    if (barbearia.cortes[i].id === id) {
+      let res = barbearia.cortes[i]
+      return res
     }
   }
-
-  return `Média total: ${total / count}`;
 }
+a = buscaCortePorId(1)
+console.log(a)
 
-const r = mediaTotal(listaAlunos);
-console.log(r);
-
-function mediaMaterias(listaAlunos) {
-  let medias = {};
-
-  for (let i = 0; i < listaAlunos.length; i++) {
-    const mat = listaAlunos[i].materias;
-
-    for (let j = 0; j < mat.length; j++) {
-      const r = mat[j].avaliacoes;
-      const nomeMateria = mat[j].nome;
-      let soma = 0;
-
-      for (let x = 0; x < r.length; x++) {
-        soma += r[x];
-      }
-
-      const media = soma / r.length;
-      medias[nomeMateria] = media;
+function buscaBarbaPorId(id) {
+  for (let i = 0; i < barbearia.barbas.length; i++) {
+    if (barbearia.barbas[i].id === id) {
+      let res = barbearia.barbas[i]
+      return res
     }
   }
-
-  return medias;
 }
+b = buscaBarbaPorId(2)
+console.log(b)
 
-const medias = mediaMaterias(listaAlunos);
-console.log(medias);
+function verificaStatusBarbearia() {
+  if (barbearia.estaAberto === true){
+    return "Estamos abertos"
+  } else {
+    return "Estamos fechados"
+  }
+}
+c = verificaStatusBarbearia()
+console.log(c)
+
+function retornaTodosCortes() {
+  for (let i = 0; i < barbearia.cortes.length; i++) {
+      return barbearia.cortes
+  }
+}
+d = retornaTodosCortes()
+console.log(d)
+
+function retornaTodasBarbas() {
+  for (let i = 0; i < barbearia.barbas.length; i++) {
+    return barbearia.barbas
+  }
+}
+e = retornaTodasBarbas()
+console.log(e)
+
+function criaPedido(nomeCliente, corteId, barbaId) {
+  let corte = buscaCortePorId(corteId)
+  let barba = buscaBarbaPorId(barbaId)
+  let pedido = {nome: nomeCliente, pedidoCorte: corte, pedidoCortePreco:30, pedidoBarba: barba, pedidoBarbaPreco:20}
+  return pedido
+}
+f = criaPedido('Joao', 1,2)
+console.log(f)
+
+function atualizaPedido(lista, id, valor, tipo) {
+  lista = [{id, valor, tipo}]
+  for (let i = 0; i < barbearia.cortes.length; i++) {
+    if (barbearia.cortes[i].id === id) {
+      barbearia.cortes[i].tipo = tipo
+      barbearia.cortes[i].valor = valor
+      return 'Item atualizado com sucesso'
+    } else {
+      return 'Entrada de valores inválida'
+    }
+  }
+}
+g = atualizaPedido({id: 1, valor: 15.0, tipo: 'Americano'}, 1, 15.0, 'Americano')
+console.log(g)
+console.log(barbearia)
+function calculaTotal(pedido) {
+  let f = criaPedido()
+  return f.pedidoCortePreco + f.pedidoBarbaPreco
+}
+h = calculaTotal()
+console.log(h)
