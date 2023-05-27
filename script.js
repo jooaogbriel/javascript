@@ -832,101 +832,126 @@
 // const medias = mediaMaterias(listaAlunos);
 // console.log(medias);
 
-const barbearia = {
-  cortes: [
-    { id: 1, tipo: "Militar", valor: 20.0 },
-    { id: 2, tipo: "Samurai", valor: 35.0 },
-    { id: 3, tipo: "Pompadour", valor: 20 },
-    { id: 4, tipo: "Moicano", valor: 0 },
-    { id: 5, tipo: "Razor part", valor: 0 },
-  ],
+// const barbearia = {
+//   cortes: [
+//     { id: 1, tipo: "Militar", valor: 20.0 },
+//     { id: 2, tipo: "Samurai", valor: 35.0 },
+//     { id: 3, tipo: "Pompadour", valor: 20 },
+//     { id: 4, tipo: "Moicano", valor: 0 },
+//     { id: 5, tipo: "Razor part", valor: 0 },
+//   ],
 
-  barbas: [
-    { id: 1, tipo: "Capitão Jack", valor: 20.0 },
-    { id: 2, tipo: "Van Dyke", valor: 20.0 },
-    { id: 3, tipo: "Barba Média", valor: 20.0 },
-    { id: 4, tipo: "Barba Baixa", valor: 20.0 },
-    { id: 5, tipo: "Barba Zero", valor: 15.0 },
-  ],
-  estaAberto: true,
-};
+//   barbas: [
+//     { id: 1, tipo: "Capitão Jack", valor: 20.0 },
+//     { id: 2, tipo: "Van Dyke", valor: 20.0 },
+//     { id: 3, tipo: "Barba Média", valor: 20.0 },
+//     { id: 4, tipo: "Barba Baixa", valor: 20.0 },
+//     { id: 5, tipo: "Barba Zero", valor: 15.0 },
+//   ],
+//   estaAberto: true,
+// };
 
-function buscaCortePorId(id) {
+// function buscaCortePorId(id) {
 
-  for (let i = 0; i < barbearia.cortes.length; i++) {
-    if (barbearia.cortes[i].id === id) {
-      let res = barbearia.cortes[i]
-      return res
-    }
-  }
+//   for (let i = 0; i < barbearia.cortes.length; i++) {
+//     if (barbearia.cortes[i].id === id) {
+//       let res = barbearia.cortes[i]
+//       return res
+//     }
+//   }
+// }
+// a = buscaCortePorId(1)
+// console.log(a)
+
+// function buscaBarbaPorId(id) {
+//   for (let i = 0; i < barbearia.barbas.length; i++) {
+//     if (barbearia.barbas[i].id === id) {
+//       let res = barbearia.barbas[i]
+//       return res
+//     }
+//   }
+// }
+// b = buscaBarbaPorId(2)
+// console.log(b)
+
+// function verificaStatusBarbearia() {
+//   if (barbearia.estaAberto === true){
+//     return "Estamos abertos"
+//   } else {
+//     return "Estamos fechados"
+//   }
+// }
+// c = verificaStatusBarbearia()
+// console.log(c)
+
+// function retornaTodosCortes() {
+//   for (let i = 0; i < barbearia.cortes.length; i++) {
+//       return barbearia.cortes
+//   }
+// }
+// d = retornaTodosCortes()
+// console.log(d)
+
+// function retornaTodasBarbas() {
+//   for (let i = 0; i < barbearia.barbas.length; i++) {
+//     return barbearia.barbas
+//   }
+// }
+// e = retornaTodasBarbas()
+// console.log(e)
+
+// function criaPedido(nomeCliente, corteId, barbaId) {
+//   let corte = buscaCortePorId(corteId)
+//   let barba = buscaBarbaPorId(barbaId)
+//   let pedido = {nome: nomeCliente, pedidoCorte: corte, pedidoCortePreco:30, pedidoBarba: barba, pedidoBarbaPreco:20}
+//   return pedido
+// }
+// f = criaPedido('Joao', 1,2)
+// console.log(f)
+
+// function atualizaPedido(lista, id, valor, tipo) {
+//   lista = [{id, valor, tipo}]
+//   for (let i = 0; i < barbearia.cortes.length; i++) {
+//     if (barbearia.cortes[i].id === id) {
+//       barbearia.cortes[i].tipo = tipo
+//       barbearia.cortes[i].valor = valor
+//       return 'Item atualizado com sucesso'
+//     } else {
+//       return 'Entrada de valores inválida'
+//     }
+//   }
+// }
+// g = atualizaPedido({id: 1, valor: 15.0, tipo: 'Americano'}, 1, 15.0, 'Americano')
+// console.log(g)
+// console.log(barbearia)
+// function calculaTotal(pedido) {
+//   let f = criaPedido()
+//   return f.pedidoCortePreco + f.pedidoBarbaPreco
+// }
+// h = calculaTotal()
+// console.log(h)
+
+// Solicitar ao usuário que entre com nome, idade e se está acompanhado
+var nome = prompt("Digite seu nome:");
+var idade = parseInt(prompt("Digite sua idade:"));
+var acompanhado = prompt("Você está acompanhado? (s/n)")
+
+if (acompanhado === "s") {
+  acompanhado = true;
+} else if (acompanhado === "n") {
+  acompanhado = false;
+} else {
+  alert("Resposta inválida. Digite 's' para sim ou 'n' para não.");
+  // Encerrar o programa ou retornar um valor padrão, caso necessário
 }
-a = buscaCortePorId(1)
-console.log(a)
 
-function buscaBarbaPorId(id) {
-  for (let i = 0; i < barbearia.barbas.length; i++) {
-    if (barbearia.barbas[i].id === id) {
-      let res = barbearia.barbas[i]
-      return res
-    }
-  }
-}
-b = buscaBarbaPorId(2)
-console.log(b)
-
-function verificaStatusBarbearia() {
-  if (barbearia.estaAberto === true){
-    return "Estamos abertos"
+if (idade < 18) {
+  alert("Entrada não está permitida para " + nome + ": Menor de idade.");
+} else {
+  // Verificar se está acompanhado
+  if (acompanhado) {
+    alert("Entrada permitida para " + nome + ": Conceder desconto.");
   } else {
-    return "Estamos fechados"
+    alert("Entrada permitida para " + nome + ": Valor integral.");
   }
 }
-c = verificaStatusBarbearia()
-console.log(c)
-
-function retornaTodosCortes() {
-  for (let i = 0; i < barbearia.cortes.length; i++) {
-      return barbearia.cortes
-  }
-}
-d = retornaTodosCortes()
-console.log(d)
-
-function retornaTodasBarbas() {
-  for (let i = 0; i < barbearia.barbas.length; i++) {
-    return barbearia.barbas
-  }
-}
-e = retornaTodasBarbas()
-console.log(e)
-
-function criaPedido(nomeCliente, corteId, barbaId) {
-  let corte = buscaCortePorId(corteId)
-  let barba = buscaBarbaPorId(barbaId)
-  let pedido = {nome: nomeCliente, pedidoCorte: corte, pedidoCortePreco:30, pedidoBarba: barba, pedidoBarbaPreco:20}
-  return pedido
-}
-f = criaPedido('Joao', 1,2)
-console.log(f)
-
-function atualizaPedido(lista, id, valor, tipo) {
-  lista = [{id, valor, tipo}]
-  for (let i = 0; i < barbearia.cortes.length; i++) {
-    if (barbearia.cortes[i].id === id) {
-      barbearia.cortes[i].tipo = tipo
-      barbearia.cortes[i].valor = valor
-      return 'Item atualizado com sucesso'
-    } else {
-      return 'Entrada de valores inválida'
-    }
-  }
-}
-g = atualizaPedido({id: 1, valor: 15.0, tipo: 'Americano'}, 1, 15.0, 'Americano')
-console.log(g)
-console.log(barbearia)
-function calculaTotal(pedido) {
-  let f = criaPedido()
-  return f.pedidoCortePreco + f.pedidoBarbaPreco
-}
-h = calculaTotal()
-console.log(h)
