@@ -937,6 +937,7 @@ var idade = parseInt(prompt("Digite sua idade:"));
 var acompanhado = prompt("Você está acompanhado? (s/n)")
 
 if (acompanhado === "s") {
+  and
   acompanhado = true;
 } else if (acompanhado === "n") {
   acompanhado = false;
