@@ -932,27 +932,48 @@
 // console.log(h)
 
 // Solicitar ao usuário que entre com nome, idade e se está acompanhado
-var nome = prompt("Digite seu nome:");
-var idade = parseInt(prompt("Digite sua idade:"));
-var acompanhado = prompt("Você está acompanhado? (s/n)")
+// var nome = prompt("Digite seu nome:");
+// var idade = parseInt(prompt("Digite sua idade:"));
+// var acompanhado = prompt("Você está acompanhado? (s/n)")
 
-if (acompanhado === "s") {
-  and
-  acompanhado = true;
-} else if (acompanhado === "n") {
-  acompanhado = false;
-} else {
-  alert("Resposta inválida. Digite 's' para sim ou 'n' para não.");
-  // Encerrar o programa ou retornar um valor padrão, caso necessário
+// if (acompanhado === "s") {
+//   and
+//   acompanhado = true;
+// } else if (acompanhado === "n") {
+//   acompanhado = false;
+// } else {
+//   alert("Resposta inválida. Digite 's' para sim ou 'n' para não.");
+//   // Encerrar o programa ou retornar um valor padrão, caso necessário
+// }
+
+// if (idade < 18) {
+//   alert("Entrada não está permitida para " + nome + ": Menor de idade.");
+// } else {
+//   // Verificar se está acompanhado
+//   if (acompanhado) {
+//     alert("Entrada permitida para " + nome + ": Conceder desconto.");
+//   } else {
+//     alert("Entrada permitida para " + nome + ": Valor integral.");
+//   }
+// }
+
+function gerarNumeroAleatorio() {
+  return Math.floor(Math.random() * 20) + 1;
 }
 
-if (idade < 18) {
-  alert("Entrada não está permitida para " + nome + ": Menor de idade.");
-} else {
-  // Verificar se está acompanhado
-  if (acompanhado) {
-    alert("Entrada permitida para " + nome + ": Conceder desconto.");
-  } else {
-    alert("Entrada permitida para " + nome + ": Valor integral.");
+function verificarPalpite(numeroAleatorio, palpite) {
+  let tentativa = 1;
+
+  while (numeroAleatorio !== palpite) {
+    alert("Tente novamente.");
+    palpite = parseInt(prompt("Digite seu palpite (um número de 1 a 20):"));
+    tentativa++;
   }
+
+  alert("Você acertou na tentativa " + tentativa + ".");
 }
+
+const numeroAleatorio = gerarNumeroAleatorio();
+let palpite = parseInt(prompt("Digite seu palpite (um número de 1 a 20):"));
+
+verificarPalpite(numeroAleatorio, palpite);
