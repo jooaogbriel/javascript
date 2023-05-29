@@ -957,23 +957,32 @@
 //   }
 // }
 
-function gerarNumeroAleatorio() {
-  return Math.floor(Math.random() * 20) + 1;
+// function gerarNumeroAleatorio() {
+//   return Math.floor(Math.random() * 20) + 1;
+// }
+
+// function verificarPalpite(numeroAleatorio, palpite) {
+//   let tentativa = 1;
+
+//   while (numeroAleatorio !== palpite) {
+//     alert("Tente novamente.");
+//     palpite = parseInt(prompt("Digite seu palpite (um número de 1 a 20):"));
+//     tentativa++;
+//   }
+
+//   alert("Você acertou na tentativa " + tentativa + ".");
+// }
+
+// const numeroAleatorio = gerarNumeroAleatorio();
+// let palpite = parseInt(prompt("Digite seu palpite (um número de 1 a 20):"));
+
+// verificarPalpite(numeroAleatorio, palpite);
+
+function contarPalavras(texto) {
+  const palavras = texto.toLowerCase().split(/[^a-z]+/).filter(palavra => palavra !== '');
+  return palavras.length;
 }
 
-function verificarPalpite(numeroAleatorio, palpite) {
-  let tentativa = 1;
-
-  while (numeroAleatorio !== palpite) {
-    alert("Tente novamente.");
-    palpite = parseInt(prompt("Digite seu palpite (um número de 1 a 20):"));
-    tentativa++;
-  }
-
-  alert("Você acertou na tentativa " + tentativa + ".");
-}
-
-const numeroAleatorio = gerarNumeroAleatorio();
-let palpite = parseInt(prompt("Digite seu palpite (um número de 1 a 20):"));
-
-verificarPalpite(numeroAleatorio, palpite);
+const texto = prompt("Digite o texto: ");
+const quantidadePalavras = contarPalavras(texto);
+console.log("Quantidade de palavras:", quantidadePalavras);
