@@ -985,11 +985,47 @@
 //   return distAll + widthAllPillars;
 // }
 
-function dutyFree(normPrice, discount, hol){
-  const economiaPorGarrafa = Math.floor(normPrice * discount / 100);
-  const quantidadeGarrafas = Math.ceil(hol / economiaPorGarrafa);
-  return quantidadeGarrafas;
+// function dutyFree(normPrice, discount, hol){
+//   const economiaPorGarrafa = Math.floor(normPrice * discount / 100);
+//   const quantidadeGarrafas = Math.ceil(hol / economiaPorGarrafa);
+//   return quantidadeGarrafas;
   
+// }
+// r = dutyFree(24,35,3000)
+// console.log(r)
+
+let slenzie = {
+  nameEvent: "",
+  questions: []
 }
-r = dutyFree(24,35,3000)
-console.log(r)
+let question = {
+  user: "",
+  userQuestion: "",
+  vote:0
+}
+
+function createEvent (slenzie,str) {
+  if (str.length <= 5 && typeof str == 'string') {
+    slenzie.nameEvent = str
+    return slenzie
+  } else {
+    return "The input value is invalid"
+  }
+}
+r = createEvent(slenzie, 'ola')
+
+function addQuestion(slenzie, question) {
+    slenzie.questions = question
+    return question
+}
+q = addQuestion(slenzie, {user: 'joao', userQuestion: 'why?', vote: 1})
+
+function addVoteToQuestion(slenzie) {
+for (let i = 0; i < slenzie.questions.length; i++){
+  let quest = slenzie.questions[i]
+  return quest
+  }
+}
+s = addVoteToQuestion(slenzie)
+console.log(s)
+console.log(slenzie)
