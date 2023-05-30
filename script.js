@@ -977,12 +977,19 @@
 // let palpite = parseInt(prompt("Digite seu palpite (um número de 1 a 20):"));
 
 // verificarPalpite(numeroAleatorio, palpite);
+// function pillars(num_pill, dist, width) {
+//   if (num_pill < 2) return 0;
+//   const widthAllPillars = (num_pill - 2) * width;
+//   const distAll = (num_pill - 1) * (dist * 100);
+  
+//   return distAll + widthAllPillars;
+// }
 
-function contarPalavras(texto) {
-  const palavras = texto.toLowerCase().split(/[^a-z]+/).filter(palavra => palavra !== '');
-  return palavras.length;
+function dutyFree(normPrice, discount, hol){
+  const economiaPorGarrafa = Math.floor(normPrice * discount / 100);
+  const quantidadeGarrafas = Math.ceil(hol / economiaPorGarrafa);
+  return quantidadeGarrafas;
+  
 }
-
-const texto = prompt("Digite o texto: ");
-const quantidadePalavras = contarPalavras(texto);
-console.log("Quantidade de palavras:", quantidadePalavras);
+r = dutyFree(24,35,3000)
+console.log(r)
