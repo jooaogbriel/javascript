@@ -994,38 +994,153 @@
 // r = dutyFree(24,35,3000)
 // console.log(r)
 
-let slenzie = {
-  nameEvent: "",
-  questions: []
+// let slenzie = {
+//   nameEvent: "",
+//   questions: []
+// }
+// let question = {
+//   user: "",
+//   userQuestion: "",
+//   vote:0
+// }
+
+// function createEvent (slenzie,str) {
+//   if (str.length <= 5 && typeof str == 'string') {
+//     slenzie.nameEvent = str
+//     return slenzie
+//   } else {
+//     return "The input value is invalid"
+//   }
+// }
+// r = createEvent(slenzie, 'ola')
+
+// function addQuestion(slenzie, question) {
+//     slenzie.questions = question
+//     return question
+// }
+// q = addQuestion(slenzie, {user: 'joao', userQuestion: 'why?', vote: 1})
+
+// function addVoteToQuestion(slenzie) {
+// for (let i = 0; i < slenzie.questions.length; i++){
+//   let quest = slenzie.questions[i]
+//   return quest
+//   }
+// }
+// s = addVoteToQuestion(slenzie)
+// console.log(s)
+// console.log(slenzie)
+
+const data = [
+  {
+    name: 'Hotel Cancun',
+    country: 'México',
+    price: 250,
+    isOpen: true,
+    toBook: [
+      {
+        date: '24/05/2023',
+        isAvaliable: true,
+      },
+      {
+        date: '30/07/2023',
+        isAvaliable: false,
+      },
+      {
+        date: '04/01/2024',
+        isAvaliable: true,
+      },
+    ],
+  },
+  {
+    name: 'Pousada do Zé',
+    country: 'Brasil',
+    price: 130,
+    isOpen: true,
+    toBook: [
+      {
+        date: '17/03/2023',
+        isAvaliable: false,
+      },
+      {
+        date: '10/05/2023',
+        isAvaliable: false,
+      },
+      {
+        date: '21/06/2024',
+        isAvaliable: false,
+      },
+    ],
+  },
+  {
+    name: 'Copacabana Palace',
+    country: 'Brasil',
+    price: 350,
+    isOpen: false,
+    toBook: [
+      {
+        date: '15/01/2023',
+        isAvaliable: true,
+      },
+      {
+        date: '04/02/2023',
+        isAvaliable: true,
+      },
+      {
+        date: '09/08/2024',
+        isAvaliable: false,
+      },
+    ],
+  },
+  {
+    name: 'Empire Hotel',
+    country: 'Estados Unidos',
+    price: 400,
+    isOpen: false,
+    toBook: [
+      {
+        date: '31/12/2022',
+        isAvaliable: false,
+      },
+      {
+        date: '04/02/2023',
+        isAvaliable: false,
+      },
+      {
+        date: '29/07/2024',
+        isAvaliable: false,
+      },
+    ],
+  },
+];
+console.log(data[2].toBook[0])
+//Desenvolva sua lógica aqui utlizando o método de array filter e verifique o resultado no console do seu navegador.
+
+//1) Crie uma função para filtrar os hotéis que estão localizados no Brasil
+function filterCountry(array) {
+  return array.filter(array => array.country === 'Brasil' )
 }
-let question = {
-  user: "",
-  userQuestion: "",
-  vote:0
+console.log(filterCountry(data));
+
+// 2) Crie uma função para filtrar os hotéis que possuem o preço igual ou maior que R$200,00.
+function filterPrice(array) {
+  return array.filter(array => array.price >= 200 )
+}
+console.log(filterPrice(data));
+
+//3) Crie uma função para filtrar os hotéis que estão abertos nesse momento (isOpen)
+function filterIsOpen(array) {
+  return array.filter(array => array.isOpen === true )
+}
+console.log(filterIsOpen(data));
+
+//DESAFIO
+//4) Crie uma função que filtre apenas o hotel com o nome “Copacabana Palace”. Após isso, crie outra função para verificar as datas disponíveis para agendamento nesse hotel (isAvaliable).
+function filterHotelName(array) {
+  return array.filter(array => array.name === 'Copacabana Palace' )
 }
 
-function createEvent (slenzie,str) {
-  if (str.length <= 5 && typeof str == 'string') {
-    slenzie.nameEvent = str
-    return slenzie
-  } else {
-    return "The input value is invalid"
-  }
+function filterToBook() {
+  const hotel = filterHotelName(data);
+  return hotel.toBook.filter( array => array.isAvaliable)
 }
-r = createEvent(slenzie, 'ola')
-
-function addQuestion(slenzie, question) {
-    slenzie.questions = question
-    return question
-}
-q = addQuestion(slenzie, {user: 'joao', userQuestion: 'why?', vote: 1})
-
-function addVoteToQuestion(slenzie) {
-for (let i = 0; i < slenzie.questions.length; i++){
-  let quest = slenzie.questions[i]
-  return quest
-  }
-}
-s = addVoteToQuestion(slenzie)
-console.log(s)
-console.log(slenzie)
+console.log(filterToBook());
