@@ -1030,117 +1030,188 @@
 // console.log(s)
 // console.log(slenzie)
 
-const data = [
+// const data = [
+//   {
+//     name: 'Hotel Cancun',
+//     country: 'México',
+//     price: 250,
+//     isOpen: true,
+//     toBook: [
+//       {
+//         date: '24/05/2023',
+//         isAvaliable: true,
+//       },
+//       {
+//         date: '30/07/2023',
+//         isAvaliable: false,
+//       },
+//       {
+//         date: '04/01/2024',
+//         isAvaliable: true,
+//       },
+//     ],
+//   },
+//   {
+//     name: 'Pousada do Zé',
+//     country: 'Brasil',
+//     price: 130,
+//     isOpen: true,
+//     toBook: [
+//       {
+//         date: '17/03/2023',
+//         isAvaliable: false,
+//       },
+//       {
+//         date: '10/05/2023',
+//         isAvaliable: false,
+//       },
+//       {
+//         date: '21/06/2024',
+//         isAvaliable: false,
+//       },
+//     ],
+//   },
+//   {
+//     name: 'Copacabana Palace',
+//     country: 'Brasil',
+//     price: 350,
+//     isOpen: false,
+//     toBook: [
+//       {
+//         date: '15/01/2023',
+//         isAvaliable: true,
+//       },
+//       {
+//         date: '04/02/2023',
+//         isAvaliable: true,
+//       },
+//       {
+//         date: '09/08/2024',
+//         isAvaliable: false,
+//       },
+//     ],
+//   },
+//   {
+//     name: 'Empire Hotel',
+//     country: 'Estados Unidos',
+//     price: 400,
+//     isOpen: false,
+//     toBook: [
+//       {
+//         date: '31/12/2022',
+//         isAvaliable: false,
+//       },
+//       {
+//         date: '04/02/2023',
+//         isAvaliable: false,
+//       },
+//       {
+//         date: '29/07/2024',
+//         isAvaliable: false,
+//       },
+//     ],
+//   },
+// ];
+// console.log(data[2].toBook[0])
+// //Desenvolva sua lógica aqui utlizando o método de array filter e verifique o resultado no console do seu navegador.
+
+// //1) Crie uma função para filtrar os hotéis que estão localizados no Brasil
+// function filterCountry(array) {
+//   return array.filter(array => array.country === 'Brasil' )
+// }
+// console.log(filterCountry(data));
+
+// // 2) Crie uma função para filtrar os hotéis que possuem o preço igual ou maior que R$200,00.
+// function filterPrice(array) {
+//   return array.filter(array => array.price >= 200 )
+// }
+// console.log(filterPrice(data));
+
+// //3) Crie uma função para filtrar os hotéis que estão abertos nesse momento (isOpen)
+// function filterIsOpen(array) {
+//   return array.filter(array => array.isOpen === true )
+// }
+// console.log(filterIsOpen(data));
+
+// //DESAFIO
+// //4) Crie uma função que filtre apenas o hotel com o nome “Copacabana Palace”. Após isso, crie outra função para verificar as datas disponíveis para agendamento nesse hotel (isAvaliable).
+// function filterHotelName(array) {
+//   return array.filter(array => array.name === 'Copacabana Palace' )
+// }
+
+// function filterToBook() {
+//   const hotel = filterHotelName(data);
+//   return hotel.toBook.filter( array => array.isAvaliable)
+// }
+// console.log(filterToBook());
+
+const products = [
   {
-    name: 'Hotel Cancun',
-    country: 'México',
-    price: 250,
-    isOpen: true,
-    toBook: [
-      {
-        date: '24/05/2023',
-        isAvaliable: true,
-      },
-      {
-        date: '30/07/2023',
-        isAvaliable: false,
-      },
-      {
-        date: '04/01/2024',
-        isAvaliable: true,
-      },
-    ],
+    name: 'Camisa Polo',
+    size: 'G',
+    price: 90,
+    sale: true,
   },
   {
-    name: 'Pousada do Zé',
-    country: 'Brasil',
-    price: 130,
-    isOpen: true,
-    toBook: [
-      {
-        date: '17/03/2023',
-        isAvaliable: false,
-      },
-      {
-        date: '10/05/2023',
-        isAvaliable: false,
-      },
-      {
-        date: '21/06/2024',
-        isAvaliable: false,
-      },
-    ],
-  },
-  {
-    name: 'Copacabana Palace',
-    country: 'Brasil',
+    name: 'Casaco de Couro',
+    size: 'M',
     price: 350,
-    isOpen: false,
-    toBook: [
-      {
-        date: '15/01/2023',
-        isAvaliable: true,
-      },
-      {
-        date: '04/02/2023',
-        isAvaliable: true,
-      },
-      {
-        date: '09/08/2024',
-        isAvaliable: false,
-      },
-    ],
+    sale: true,
   },
   {
-    name: 'Empire Hotel',
-    country: 'Estados Unidos',
-    price: 400,
-    isOpen: false,
-    toBook: [
-      {
-        date: '31/12/2022',
-        isAvaliable: false,
-      },
-      {
-        date: '04/02/2023',
-        isAvaliable: false,
-      },
-      {
-        date: '29/07/2024',
-        isAvaliable: false,
-      },
-    ],
+    name: 'Calça',
+    size: 'GG',
+    price: 80,
+    sale: false,
+  },
+  {
+    name: 'Jaqueta Jeans',
+    size: 'P',
+    price: 200,
+    sale: false,
+  },
+  {
+    name: 'Moletom',
+    size: 'GG',
+    price: 180,
+    sale: false,
+  },
+  {
+    name: 'Camisa Regata',
+    size: 'M',
+    price: 60,
+    sale: true,
   },
 ];
-console.log(data[2].toBook[0])
-//Desenvolva sua lógica aqui utlizando o método de array filter e verifique o resultado no console do seu navegador.
 
-//1) Crie uma função para filtrar os hotéis que estão localizados no Brasil
-function filterCountry(array) {
-  return array.filter(array => array.country === 'Brasil' )
-}
-console.log(filterCountry(data));
+//Desenvolva sua lógica aqui utlizando o método de array reduce e verifique o resultado no console do seu navegador.
 
-// 2) Crie uma função para filtrar os hotéis que possuem o preço igual ou maior que R$200,00.
-function filterPrice(array) {
-  return array.filter(array => array.price >= 200 )
-}
-console.log(filterPrice(data));
+//1) Vamos começar de uma maneira bem simples. Crie uma função que some todos os números contidos dentro do array [20, 13, 50, 36, 97].
+const numbers = [20, 13, 50, 36, 97];
 
-//3) Crie uma função para filtrar os hotéis que estão abertos nesse momento (isOpen)
-function filterIsOpen(array) {
-  return array.filter(array => array.isOpen === true )
+function sumNumbers(array) {
+  return array.reduce((ac, cur) =>  ac + cur)
 }
-console.log(filterIsOpen(data));
+console.log(sumNumbers(numbers));
+
+//2) Agora utilizaremos o nosso array de produtos. Crie uma função que percorra todos os elementos desse array e retorne o valor total de todos os produtos do carrinho.
+function totalProducts(array) {
+  return array.reduce((ac, cur) =>  ac + cur.price,0)
+}
+console.log(totalProducts(products));
+
+//3) Vamos deixar mais interessante? Utilizando o nosso array products, crie uma função que filtre apenas os produtos com tamanho GG e retorne a soma dos preços desses produtos.
+function totalProductsSize(array) {
+  let gg = array.filter(elem => elem.size === 'GG')
+  return gg.reduce((ac, cur) =>  ac + cur.price,0)
+}
+console.log(totalProductsSize(products));
 
 //DESAFIO
-//4) Crie uma função que filtre apenas o hotel com o nome “Copacabana Palace”. Após isso, crie outra função para verificar as datas disponíveis para agendamento nesse hotel (isAvaliable).
-function filterHotelName(array) {
-  return array.filter(array => array.name === 'Copacabana Palace' )
+//4) Crie uma função que filtre os elementos em promoção e aplique 50% de desconto no preço deles. Após isso, some o valor total desses produtos.
+function totalProductsSale(array) {
+  let gg = array.filter(elem => elem.sale)
+  let res = gg.reduce((ac, cur) => (ac + cur.price) - cur.price * 0.5 ,0)
+  return res
 }
-
-function filterToBook() {
-  const hotel = filterHotelName(data);
-  return hotel.toBook.filter( array => array.isAvaliable)
-}
-console.log(filterToBook());
+console.log(totalProductsSale(products));
