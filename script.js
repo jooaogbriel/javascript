@@ -1215,42 +1215,56 @@
 //   return res
 // }
 // console.log(totalProductsSale(products));
+//Desenvolva sua lógica aqui utilizando o método de array sort
 
-const listaDeSobremesas = [
-  {
-      nome: 'Bolo de morango',
-      descricao: 'O morango, além de ser saudável, é muito apreciado, por isso muitos bolos são feitos usando essa fruta no recheio, na massa e na cobertura.',
-      imagem: 'https://s2.glbimg.com/VsoG13gLBt3lRHW5fkaaJH-NPeQ=/0x0:1280x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/f/f/DLO9veTbiW41gbCjujVQ/bolo-de-morango-com-chantilly-receita.jpg'
-  },
-  {
-      nome: 'Torta de limão',
-      descricao: 'Confira essa receita de torta de limão com bolacha, sobremesa queridinha dos brasileiros e perfeita pra todas as horas!',
-      imagem: 'https://images.aws.nestle.recipes/resized/40b25559b85b265e885f55ec7c1e4d04_torta-lim%C3%A3o-receitas-nestle_1200_600.jpg'
-  },
-  {
-      nome: 'Chocolate branco',
-      descricao: 'O chocolate é um alimento feito com base na amêndoa fermentada e torrada do cacau.',
-      imagem: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Chocolate-branco-2.webp'
-  },
-  {
-      nome: 'Doce de morango',
-      descricao: 'Comem-se sobre fatias de pão ou bolachas, ou misturam-se com iogurte ou ainda para rechear bolos ou outros doces.',
-      imagem: 'https://claudia.abril.com.br/wp-content/uploads/2020/02/receita-gelado-doce-leite-morango.jpg'
-  },
-  {
-      nome: 'Mousse de limão',
-      descricao: 'Aprenda a preparar esta deliciosa receita de mousse de limão rápido. Uma sobremesa perfeita para os dias quentes. Confira!',
-      imagem: 'https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/10/mousse-de-limao-facil-1.jpg?x41527'
-  },
-  {
-      nome: 'Chocolate',
-      descricao: 'O chocolate é um alimento feito com base na amêndoa fermentada e torrada do cacau.',
-      imagem: 'https://perfectdailygrind.com/wp-content/uploads/2020/04/Hs_5Ce8ecmXodh-AdEVHyT07irPaZ-zAAhYkKYRJgS5CVzHKs0cAAdyeAF9TIgyh4KI5gqYmyuIDwJnf2f9wCdNvJ5WbQOlSoRr5zmmzMalyR1-RQxvlOtTZkJq9G_GPUiVZ6_WX-1-1-1536x1024.jpeg'
-  },
-]
+//1) Dado o array [200, 153, 875, 53, 20, 62, 428, 5], ordene os números em ordem crescente.
+const numbers = [200, 153, 875, 53, 20, 62, 428, 5];
+numbers.sort((a,b) => a - b)
+console.log(numbers)
 
-function procuraSobremesa(valorDoInput) {
-  /* Desenvolva sua lógica a partir aqui */
-  
-  return /* É necessário retornar uma lista de produtos */
-}
+//2) Utilizando o array do exemplo anterior, ordene os números em ordem decrescente.
+numbers.sort((a,b) => b - a)
+console.log(numbers)
+//3) Dado o array ['Matheus', 'Samuel', 'Bruna', 'Patrick', 'Yan', 'Amanda', 'Carlos'], ordene os nomes em ordem alfabética
+const names = [
+  'Matheus',
+  'Samuel',
+  'Bruna',
+  'Patrick',
+  'Yan',
+  'Amanda',
+  'Carlos',
+];
+names.sort()
+console.log(names)
+//DESAFIO
+//4) Dado um objeto "loja", acesse a propriedade "produtos", filtre apenas os elementos que possuem o preço maior que 100 e ordene em ordem crescente.
+const loja = {
+  nome: 'Kenzie Store',
+  local: 'Brasil',
+  produtos: [
+    {
+      nomeProduto: 'Moletom',
+      preco: 250,
+    },
+    {
+      nomeProduto: 'Casaco',
+      preco: 100,
+    },
+    {
+      nomeProduto: 'Tênis',
+      preco: 180,
+    },
+    {
+      nomeProduto: 'Regata',
+      preco: 50,
+    },
+    {
+      nomeProduto: 'Calça',
+      preco: 120,
+    },
+  ],
+};
+let filt = loja.produtos.filter(elem => elem.preco > 100)
+r = filt.sort((a,b) => a.preco - b.preco )
+console.log(r)
