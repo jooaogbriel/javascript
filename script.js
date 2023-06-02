@@ -1216,55 +1216,32 @@
 // }
 // console.log(totalProductsSale(products));
 //Desenvolva sua lógica aqui utilizando o método de array sort
-
-//1) Dado o array [200, 153, 875, 53, 20, 62, 428, 5], ordene os números em ordem crescente.
-const numbers = [200, 153, 875, 53, 20, 62, 428, 5];
-numbers.sort((a,b) => a - b)
-console.log(numbers)
-
-//2) Utilizando o array do exemplo anterior, ordene os números em ordem decrescente.
-numbers.sort((a,b) => b - a)
-console.log(numbers)
-//3) Dado o array ['Matheus', 'Samuel', 'Bruna', 'Patrick', 'Yan', 'Amanda', 'Carlos'], ordene os nomes em ordem alfabética
-const names = [
-  'Matheus',
-  'Samuel',
-  'Bruna',
-  'Patrick',
-  'Yan',
-  'Amanda',
-  'Carlos',
-];
-names.sort()
-console.log(names)
-//DESAFIO
-//4) Dado um objeto "loja", acesse a propriedade "produtos", filtre apenas os elementos que possuem o preço maior que 100 e ordene em ordem crescente.
-const loja = {
-  nome: 'Kenzie Store',
-  local: 'Brasil',
-  produtos: [
+const funcionarios = [
     {
-      nomeProduto: 'Moletom',
-      preco: 250,
+     nome: "Jorge",
+     setor: "Marketing",
+     salario: 2200
     },
     {
-      nomeProduto: 'Casaco',
-      preco: 100,
+     nome: "Ana",
+     setor: "TI",
+     salario: 6100
     },
     {
-      nomeProduto: 'Tênis',
-      preco: 180,
+     nome: "Emanoel",
+     setor: "Design",
+     salario: 5200
     },
     {
-      nomeProduto: 'Regata',
-      preco: 50,
+     nome: "Maria",
+     setor: "TI",
+     salario: 8500
     },
     {
-      nomeProduto: 'Calça',
-      preco: 120,
+     nome: "Cleiton",
+     setor: "Em treinamento",
+     salario: 1100
     },
-  ],
-};
-let filt = loja.produtos.filter(elem => elem.preco > 100)
-r = filt.sort((a,b) => a.preco - b.preco )
-console.log(r)
+]
+console.log(funcionarios)
+console.log(funcionarios.filter(elem => elem.salario *= 1.01))
