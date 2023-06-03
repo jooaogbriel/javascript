@@ -1245,3 +1245,6 @@ const funcionarios = [
 ]
 console.log(funcionarios)
 console.log(funcionarios.filter(elem => elem.salario *= 1.01))
+let f = {nome:'joao',setor: "TI",salario: 6100 }
+let yes = [...funcionarios, f ]
+console.log(funcionarios)
