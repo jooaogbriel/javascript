@@ -1216,35 +1216,35 @@
 // }
 // console.log(totalProductsSale(products));
 //Desenvolva sua lógica aqui utilizando o método de array sort
-const funcionarios = [
-    {
-     nome: "Jorge",
-     setor: "Marketing",
-     salario: 2200
-    },
-    {
-     nome: "Ana",
-     setor: "TI",
-     salario: 6100
-    },
-    {
-     nome: "Emanoel",
-     setor: "Design",
-     salario: 5200
-    },
-    {
-     nome: "Maria",
-     setor: "TI",
-     salario: 8500
-    },
-    {
-     nome: "Cleiton",
-     setor: "Em treinamento",
-     salario: 1100
-    },
-]
-console.log(funcionarios)
-console.log(funcionarios.filter(elem => elem.salario *= 1.01))
-let f = {nome:'joao',setor: "TI",salario: 6100 }
-let yes = [...funcionarios, f ]
-console.log(funcionarios)
+// const funcionarios = [
+//     {
+//      nome: "Jorge",
+//      setor: "Marketing",
+//      salario: 2200
+//     },
+//     {
+//      nome: "Ana",
+//      setor: "TI",
+//      salario: 6100
+//     },
+//     {
+//      nome: "Emanoel",
+//      setor: "Design",
+//      salario: 5200
+//     },
+//     {
+//      nome: "Maria",
+//      setor: "TI",
+//      salario: 8500
+//     },
+//     {
+//      nome: "Cleiton",
+//      setor: "Em treinamento",
+//      salario: 1100
+//     },
+// ]
+// console.log(funcionarios)
+// console.log(funcionarios.filter(elem => elem.salario *= 1.01))
+// let f = {nome:'joao',setor: "TI",salario: 6100 }
+// let yes = [...funcionarios, f ]
+// console.log(funcionarios)
